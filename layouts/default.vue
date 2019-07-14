@@ -5,17 +5,25 @@
 
     <!-- 相当于router-view -->
     <nuxt />
+
+    <!-- 底部组件 -->
+    <Footer/>
+
   </div>
 </template>
 
 <script>
-//导入头部
+//导入头部组件
 import Header from '@/components/header.vue'
+
+//导入底部组件
+import Footer from '@/components/footer.vue'
 
 export default {
   //注册头部
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
