@@ -1,4 +1,5 @@
 <template>
+<!-- 首页底部 -->
     <div class="footer-wrapper">
         <div class="footer">
             <el-row class="info-list">
