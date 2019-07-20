@@ -35,7 +35,7 @@
             </span>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item>个人中心</el-dropdown-item>
-              <el-dropdown-item>退出</el-dropdown-item>
+              <el-dropdown-item @click.native="handleLogin">退出</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </div>
@@ -46,6 +46,16 @@
 
 <script>
 export default {
+  // 事件方法
+  methods:{
+    handleLogin(){
+      // 清空store和本地存储数据
+      this.$store.commit("user/clearUserInfo")
+      // 提示用户退出成功
+      this.$message("退出成功")
+    }
+  },
+  // 钩子函数
   mounted () {
     // store中的数据每个模块都是单独的数据，读取时候需要使用模块名字区分开
     // console.log(this.$store.state.user.userInfo.user.nickname)
